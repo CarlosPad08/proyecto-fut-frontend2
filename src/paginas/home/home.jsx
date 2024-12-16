@@ -25,14 +25,14 @@ function Home() {
         </header>
         <main>
             <div className="home-contenedor-canchas">
-                <div className="home-cancha home-cancha1" onClick={() => handleCanchaClick('Cancha #1')}>
-                    <h2>Cancha #1</h2>
+                <div className="home-cancha home-cancha1" onClick={() => handleCanchaClick('Cancha 1')}>
+                    <h2>Cancha 1</h2>
                 </div>
-                <div className="home-cancha home-cancha2" onClick={() => handleCanchaClick('Cancha #2')}>
-                    <h2>Cancha #2</h2>
+                <div className="home-cancha home-cancha2" onClick={() => handleCanchaClick('Cancha 2')}>
+                    <h2>Cancha 2</h2>
                 </div>
-                <div className="home-cancha home-cancha3" onClick={() => handleCanchaClick('Cancha #3')}>
-                    <h2>Cancha #3</h2>
+                <div className="home-cancha home-cancha3" onClick={() => handleCanchaClick('Cancha 3')}>
+                    <h2>Cancha 3</h2>
                 </div>
             </div>
             {selectedCancha && (

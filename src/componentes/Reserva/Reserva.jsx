@@ -40,8 +40,8 @@ const Reserva = ({ cancha, onClose }) => {
 
         try {
             console.log('Enviando solicitud de reserva...');
-            const response = await axios.post('http://localhost:3000/api/reserva', {
-                usuario_id: 0,
+            const response = await axios.post('http://localhost:3000/api/reserves', {
+                usuario_id: 1,
                 cancha_id: cancha.split(' ')[1],
                 fecha,
                 hora_inicio: horaInicio,
@@ -95,7 +95,8 @@ const Reserva = ({ cancha, onClose }) => {
                         <label htmlFor="opcion" className='reserva-label'><i className="bi bi-caret-down-fill"></i> Seleccione un horario</label>
                     </div>
                     <div className="reserva-registrar">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, totam tenetur rem quos harum id dolorum eos consequuntur reprehenderit et! Explicabo laboriosam, ducimus soluta beatae corporis id itaque quam.</p>
+                        <p>Una vez hecha la reserva, el tiempo comienza a correr a la hora programada.</p>
+                        <p>Si se desea cancelar la reserva, ir a la seccion de reservas o ponerse en contacto con un administrador</p>
                     </div>
                     <button className="reserva-btn" type="submit">Reservar</button>
                 </form>
