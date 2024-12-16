@@ -5,6 +5,7 @@ import "./reserva.css";
 const Reserva = ({ cancha, onClose }) => {
     const [error, setError] = useState("");
     const [opciones, setOpciones] = useState([]);
+    const [fecha, setFecha] = useState("");
 
     useEffect(() => {
         const fetchOpciones = async () => {
@@ -20,45 +21,46 @@ const Reserva = ({ cancha, onClose }) => {
         fetchOpciones();
     }, []);
 
+    const handleFechaChange = (event) => {
+        setFecha(event.target.value);
+        console.log('Fecha seleccionada:', event.target.value);
+    }
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        const nombre = event.target.nombre.value;
-        const telefono = event.target.telefono.value;
-        const email = event.target.email.value;
-        const password = event.target.password.value;
+        const opcionSeleccionada = event.target.opcion.value;
+        const fecha = event.target.fecha.value;
 
-        try {
-        console.log('Enviando solicitud de registro...');
-        const response = await axios.post('http://localhost:3000/api/register', {
-            nombre,
-            telefono,
-            email,
-            password
+        const horarioSeleccionado = opciones.find(opcion => opcion === opcionSeleccionada);
+        const [horaInicio, horaFin] = horarioSeleccionado.split(' - ').map(hora => {
+            const [h, m] = hora.split(':');
+            return `${h.padStart(2, '0')}:${m}`;
         });
 
-        console.log('Respuesta del servidor:', response.data);
-        const data = response.data;
+        try {
+            console.log('Enviando solicitud de reserva...');
+            const response = await axios.post('http://localhost:3000/api/reserva', {
+                usuario_id: 0,
+                cancha_id: cancha.split(' ')[1],
+                fecha,
+                hora_inicio: horaInicio,
+                hora_fin: horaFin,
+                estado: 'pendiente'
+            });
 
-        if (!data.success) {
-            setError(data.message);
-        } else {
-            setError("");
-            alert("¡Registro exitoso!");
-            // Guarda el token en el almacenamiento local o en el estado de la aplicación
-            localStorage.setItem('token', data.token);
-        }
+            console.log('Respuesta del servidor:', response.data);
+            const data = response.data;
+
+            if (!data.success) {
+                setError(data.message);
+            } else {
+                setError("");
+                alert("¡Reserva exitosa!");
+            }
         } catch (error) {
-        if (error.response) {
-            console.error('Error en la solicitud:', error.response.data);
-            setError(`Error: ${error.response.data.message}`);
-        } else if (error.request) {
-            console.error('No se recibió respuesta del servidor:', error.request);
-            setError('No se recibió respuesta del servidor.');
-        } else {
-            console.error('Error al configurar la solicitud:', error.message);
-            setError(`Error: ${error.message}`);
-        }
+            console.error('Error al hacer la reserva:', error);
+            setError('Error al hacer la reserva. Por favor, inténtelo de nuevo.');
         }
     };
 
@@ -73,24 +75,27 @@ const Reserva = ({ cancha, onClose }) => {
                     <div className="reserva-input-box">
                         <span className="reserva-icon"><i className="bi bi-check-circle-fill"></i></span>
                         <input type="text" id="cancha" name="cancha" value={cancha} disabled/>
-                        <label className="reserva-black" htmlFor="cancha"></label>
+                        <label htmlFor="cancha"></label>
                     </div>
                     <div className="reserva-input-box">
-                            <label htmlFor="opcion"><i className="bi bi-caret-down-fill"></i> Seleccione una fecha</label>
-                            <select id="opcion" name="opcion" required>
-                                // Escoger una fecha en el mes correspondiente
-                                
-                            </select>
+                        <span className="reserva-icon"><i className="bi bi-calendar-check-fill"></i></span>
+                        <input type="date" id="fecha" name="fecha"  value={fecha}  onChange={handleFechaChange} required/>
+                        <label className="reserva-date" htmlFor="opcion"><i className="bi bi-caret-down-fill"></i> Seleccione una fecha</label>
                     </div>
                     <div className="reserva-input-box">
-                            <label htmlFor="opcion"><i className="bi bi-caret-down-fill"></i> Seleccione un horario</label>
-                            <select id="opcion" name="opcion" required>
-                                {opciones.map((opcion) => (
-                                    <option key={opcion.id} value={opcion.id}>
-                                        {opcion}
-                                    </option>
-                                ))}
-                            </select>
+                        <span className="reserva-icon"><i className="bi bi-clock-fill"></i></span>
+                        <select id="opcion" name="opcion" required>
+                            <option className="reserva-horario" value="" disabled selected>Seleccione un horario</option>
+                            {opciones.map((opcion) => (
+                                <option key={opcion.id} value={opcion.id}>
+                                    {opcion}
+                                </option>
+                            ))}
+                        </select>
+                        <label htmlFor="opcion" className='reserva-label'><i className="bi bi-caret-down-fill"></i> Seleccione un horario</label>
+                    </div>
+                    <div className="reserva-registrar">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, totam tenetur rem quos harum id dolorum eos consequuntur reprehenderit et! Explicabo laboriosam, ducimus soluta beatae corporis id itaque quam.</p>
                     </div>
                     <button className="reserva-btn" type="submit">Reservar</button>
                 </form>
