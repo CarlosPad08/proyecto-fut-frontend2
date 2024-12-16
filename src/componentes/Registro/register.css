@@ -1,0 +1,162 @@
+.register-contenedor {
+    position: relative;
+    top: 25px;
+    width: 400px;
+    height: 520px;
+    background: transparent;
+    border: 2px solid var(--verde-campo-oscuro);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.register-contenedor .register-icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+    width: 45px;
+    height: 45px;
+    background-color: var(--verde-campo-oscuro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+.register-contenedor .register-form {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.register-contenedor .register-form h2 {
+    margin: 30px 0 0 0;
+    font-size: 2rem;
+    color: var(--negro-suave);
+    text-align: center;
+}
+
+.register-contenedor .register-form .register-input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--negro-suave);
+    margin: 30px 0;
+}
+
+.register-contenedor .register-form .register-input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--blanco-humo);
+    font-weight: 400;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.register-contenedor .register-form .register-input-box .register-black {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--negro-suave);
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.register-contenedor .register-form .register-input-box input:focus~label,
+.register-contenedor .register-form .register-input-box input:valid~label {
+    top: -5px;
+}
+
+.register-contenedor .register-form .register-input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--negro-suave);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.register-contenedor .register-form .register-input-box .register-icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--negro-suave);
+    line-height: 57px;
+}
+
+.register-contenedor .register-form .register-recordar-contrasena {
+    font-size: 0.9em;
+    color: var(--blanco-humo);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-contenedor .register-form .register-recordar-contrasena label input {
+    accent-color: var(--negro-suave);
+    margin-right: 3px;
+}
+.register-contenedor .register-form .register-recordar-contrasena a {
+    color: var(--blanco-humo);
+    text-decoration: none;
+}
+
+.register-contenedor .register-form .register-recordar-contrasena a:hover {
+    text-decoration: underline;
+}
+
+.register-contenedor .register-form .register-btn {
+    width: 100%;
+    height: 45px;
+    background-color: var(--verde-pasto);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--blanco);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.register-contenedor .register-form .register-btn:active {
+    background-color: var(--verde-campo-oscuro);
+}
+
+.register-contenedor .register-form .register-registrar {
+    font-size: 0.9em;
+    color: var(--blanco-humo);
+    text-align: center;
+    font-weight: 500;
+    margin: 15px 0 0 0;
+}
+
+.register-contenedor .register-form .register-registrar p a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-contenedor .register-form .register-registrar a {
+    font-weight: 900;
+}
+
+.register-contenedor .register-form .register-registrar a:hover {
+    text-decoration: underline;
+}

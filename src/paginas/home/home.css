@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.home {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--verde-campo-oscuro);
+    background-image: url("../../../public/fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home header {
+    position: fixed;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid var(--blanco-humo);
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.home .home-logo {
+    font-size: 2rem;
+    color: var(--blanco);
+    user-select: none;
+    margin-left: 11rem;
+}
+
+.home .home-navbar {
+    margin-right: 2rem;
+}
+
+
+.home .home-navbar .home-btn {
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--blanco);
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.4s;
+}
+
+.home .home-navbar .home-btn:hover {
+    color: var(--amarillo-balon);
+    transition: 0.4s;
+}
+
+.home .home-contenedor-canchas {
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 2px solid var(--blanco-humo);
+    border-radius: 10px;
+    position: fixed;
+    width: 500px;
+    height: 520px;
+    top: 90px;
+    left: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.home .home-contenedor-canchas .home-cancha1 {
+    grid-row: 1 / 2;
+}
+
+.home .home-contenedor-canchas .home-cancha2 {
+    grid-row: 2 / 3;
+}
+
+.home .home-contenedor-canchas .home-cancha3 {
+    grid-row: 3 / 4;
+}
+
+.home .home-contenedor-canchas .home-cancha {
+    background-image: url(../../../public/canchafut.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.home .home-contenedor-canchas .home-cancha h2{
+    font-family: 'Bebas Neue';
+    color: var(--blanco-humo);
+    font-size: 3.5rem;
+    transition: 0.5s;
+}
+
+.home .home-contenedor-canchas .home-cancha h2:hover{
+    font-family: 'Bebas Neue';
+    color: var(--amarillo-balon);
+    font-size: 3.5rem;
+    transition: 0.5s;
+    transform: scale(1.2);
+}

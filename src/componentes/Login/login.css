@@ -1,0 +1,150 @@
+.login-contenedor {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid var(--verde-campo-oscuro);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.login-contenedor .login-icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+    width: 45px;
+    height: 45px;
+    background-color: var(--verde-campo-oscuro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}
+
+.login-contenedor .login-form {
+    width: 100%;
+    padding: 40px;
+}
+
+.login-contenedor .login-form h2 {
+    font-size: 2rem;
+    color: var(--negro-suave);
+    text-align: center;
+}
+
+.login-contenedor .login-form .login-input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--negro-suave);
+    margin: 30px 0;
+}
+
+.login-contenedor .login-form .login-input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--negro-suave);
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.login-contenedor .login-form .login-input-box input:focus~label,
+.login-contenedor .login-form .login-input-box input:valid~label {
+    top: -5px;
+}
+
+.login-contenedor .login-form .login-input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--negro-suave);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.login-contenedor .login-form .login-input-box .login-icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--negro-suave);
+    line-height: 57px;
+}
+
+.login-contenedor .login-form .login-recordar-contrasena {
+    font-size: 0.9em;
+    color: var(--blanco-humo);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-contenedor .login-form .login-recordar-contrasena label input {
+    accent-color: var(--negro-suave);
+    margin-right: 3px;
+}
+.login-contenedor .login-form .login-recordar-contrasena a {
+    color: var(--blanco-humo);
+    text-decoration: none;
+}
+
+.login-contenedor .login-form .login-recordar-contrasena a:hover {
+    text-decoration: underline;
+}
+
+.login-contenedor .login-form .login-btn {
+    width: 100%;
+    height: 45px;
+    background-color: var(--verde-pasto);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--blanco);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.login-contenedor .login-form .login-btn:active {
+    background-color: var(--verde-campo-oscuro);
+}
+
+.login-contenedor .login-form .login-registrar {
+    font-size: 0.9em;
+    color: var(--negro-suave);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-contenedor .login-form .login-registrar p {
+    color: var(--blanco-humo);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-contenedor .login-form .login-registrar a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-contenedor .login-form .login-registrar a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,147 @@
+.reserva-contenedor {
+    width: 450px;
+    height: 520px;
+    top: 90px;
+    left: 535px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 2px solid var(--blanco-humo);
+    position: fixed;
+}
+
+.reserva-contenedor .reserva-icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2em;
+    width: 45px;
+    height: 45px;
+    background-color: var(--verde-campo-oscuro);
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.reserva-contenedor .reserva-form {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.reserva-contenedor .reserva-form h2 {
+    margin: 30px 0 0 0;
+    font-size: 2rem;
+    color: var(--negro-suave);
+    text-align: center;
+}
+
+.reserva-contenedor .reserva-form .reserva-input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--negro-suave);
+    margin: 30px 0;
+}
+
+.reserva-contenedor .reserva-form .reserva-input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--blanco-humo);
+    font-weight: 400;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.reserva-contenedor .reserva-form .reserva-input-box .reserva-black {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: var(--negro-suave);
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.reserva-contenedor .reserva-form .reserva-input-box input:focus~label,
+.reserva-contenedor .reserva-form .reserva-input-box input:valid~label {
+    top: -5px;
+}
+
+.reserva-contenedor .reserva-form .reserva-input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--negro-suave);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.reserva-contenedor .reserva-form .reserva-input-box select {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    appearance: none;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--negro-suave);
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+    cursor: pointer;
+}
+
+.reserva-contenedor .reserva-form .reserva-input-box option {
+    color: var(--negro-suave);
+}
+
+.reserva-contenedor .reserva-form .reserva-input-box .reserva-icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: var(--negro-suave);
+    line-height: 57px;
+}
+
+.reserva-contenedor .reserva-form .reserva-recordar-contrasena label input {
+    accent-color: var(--negro-suave);
+    margin-right: 3px;
+}
+
+.reserva-contenedor .reserva-form .reserva-btn {
+    width: 100%;
+    height: 45px;
+    background-color: var(--verde-pasto);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--blanco);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.reserva-contenedor .reserva-form .reserva-btn:active {
+    background-color: var(--verde-campo-oscuro);
+}
+
+.reserva-contenedor .reserva-form .reserva-registrar {
+    font-size: 0.9em;
+    color: var(--blanco-humo);
+    text-align: center;
+    font-weight: 500;
+    margin: 15px 0 0 0;
+}

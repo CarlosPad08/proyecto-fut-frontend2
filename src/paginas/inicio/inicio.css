@@ -1,0 +1,86 @@
+.inicio {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../../../public/estadio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.inicio header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.inicio .inicio-logo {
+    font-size: 2rem;
+    color: var(--negro-suave);
+    user-select: none;
+    margin-left: 11rem;
+}
+
+.inicio .inicio-navbar {
+    margin-right: 2rem;
+}
+
+.inicio .inicio-navbar .inicio-a {
+    position: relative;
+    font-size: 1.1rem;
+    color: var(--negro-suave);
+    font-weight: 500;
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+.inicio .inicio-navbar .inicio-a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--verde-campo-oscuro);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+
+.inicio .inicio-navbar .inicio-a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.inicio .inicio-navbar .inicio-btn {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid var(--verde-campo-oscuro);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: var(--negro-suave);
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+.inicio .inicio-navbar .inicio-btn:hover {
+    background-color: var(--verde-campo-oscuro);
+    color: var(--blanco);
+    transition: 0.5s;
+}

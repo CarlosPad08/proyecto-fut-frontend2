@@ -1,0 +1,23 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* Paleta Clara */
+  --verde-pasto: #4CAF50; /* (Primario) */
+  --verde-pasto-claro: #54940a; /* (Secundario) */
+  --blanco: #FFFFFF; /* (Fondo claro) */
+  --gris-claro: #F5F5F5; /* (Detalles y texto secundario) */
+  --amarillo-balon: #FFEB3B; /* (Resaltados) */
+  --negro-suave: #212121; /* (Texto principal) */
+
+  /* Paleta Oscura */
+  --verde-campo-oscuro: #1B5E20; /* (Primario) */
+  --negro-intenso: #121212; /* (Fondo oscuro) */
+  --gris-oscuro: #424242; /* (Detalles y texto secundario) */
+  --amarillo-dorado: #FFC107;  /* (Resaltados) */
+  --blanco-humo: #E0E0E0; /* (Texto principal) */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
