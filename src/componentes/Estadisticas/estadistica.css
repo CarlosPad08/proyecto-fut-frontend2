@@ -1,0 +1,47 @@
+/* Contenedor principal */
+.estadisticas-container {
+    width: 100%; /* Cambiamos a 100% para adaptarse al ancho del contenedor */
+    height: 100%;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 2px solid var(--blanco-humo);
+    transition: width 0.5s ease; /* Transición para suavizar el ajuste */
+    box-sizing: border-box;
+    padding: 15px;
+}
+  
+  /* Título de estadísticas */
+  .estadisticas-titulo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .estadisticas-titulo h2 {
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  
+  /* Lista de estadísticas */
+  .estadisticas-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .estadisticas-lista li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 5px;
+    color: white;
+  }
+  
+  .estadisticas-lista span {
+    font-weight: bold;
+    color: white;
+  }
+  
