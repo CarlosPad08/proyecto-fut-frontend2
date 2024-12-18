@@ -114,3 +114,19 @@
     transition: 0.5s;
     transform: scale(1.2);
 }
+
+/* Contenedor principal de estadísticas */
+.home-contenedor-estadisticas {
+    position: fixed;
+    top: 90px;
+    right: 15px;
+    width: 820px; /* Ancho original */
+    height: 520px;
+    transition: width 0.5s ease; /* Animación suave */
+    z-index: 1; /* Por debajo de la ventana de reserva */
+}
+
+/* Clase que se activa cuando hay una reserva */
+.home-contenedor-estadisticas.ajustado {
+    width: 350px; /* Nuevo ancho ajustado */
+}
